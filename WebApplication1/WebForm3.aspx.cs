@@ -22,11 +22,11 @@ namespace WebApplication1
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["ADODBConnectionString"].ConnectionString))
+            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["MingConnectionString"].ConnectionString))
             {
                 using (SqlCommand cmd = cn.CreateCommand())
                 {
-                    cmd.CommandText = "select * from employees where Name like @name";
+                    cmd.CommandText = "select * from students where Name like @name";
                     cmd.Parameters.Add(new SqlParameter("@name", "%" + txtSearch.Text + "%"));
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
