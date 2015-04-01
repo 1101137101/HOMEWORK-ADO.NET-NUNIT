@@ -14,7 +14,7 @@
         <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="查詢" />
         <br />
         <asp:ListBox ID="lbResult" runat="server" Height="206px" Width="213px"></asp:ListBox>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MingConnectionString %>" SelectCommand="SELECT * FROM [Student]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MINGConnectionString %>" SelectCommand="SELECT * FROM [Students]"></asp:SqlDataSource>
     </div>
     </form>
 </body>
