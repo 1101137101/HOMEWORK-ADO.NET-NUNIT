@@ -32,8 +32,8 @@ namespace WebApplication1
                 cn.Open();
                 using (SqlCommand cmd = cn.CreateCommand())
                 {
-                    cmd.CommandText = "select * from students where Name like @name";
-                    cmd.Parameters.Add(new SqlParameter("@name", "%" + txtSearch.Text + "%"));
+                    cmd.CommandText = "Select * From Students Where Name Like @Name";
+                    cmd.Parameters.Add(new SqlParameter("@Name", "%" + txtSearch.Text + "%"));
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
                         DataTable dt = new DataTable();
@@ -49,17 +49,17 @@ namespace WebApplication1
         //ExecuteScalar
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            string sql = @"INSERT INTO [dbo].[Employees]([Name],[Age])
-                             VALUES
-                               (@Name
-                               ,@Age);SELECT CAST(scope_identity() AS int);";
-            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["ADODBConnectionString"].ConnectionString))
+            string sql = @"INSERT INTO [dbo].[Students]([Name],[Gender],[Age])
+                           VALUES(@Name,@Gender,@Age);
+                           SELECT CAST(scope_identity() AS int);";
+            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["MingConnectionString"].ConnectionString))
             {
                 cn.Open();
                 using (SqlCommand cmd = cn.CreateCommand())
                 {
                     cmd.CommandText = sql;
                     cmd.Parameters.Add(new SqlParameter("@Name", txtName.Text));
+                    cmd.Parameters.Add(new SqlParameter("@Gender", txtGender.Text));
                     cmd.Parameters.Add(new SqlParameter("@Age", txtAge.Text));
 
                     txtID.Text = cmd.ExecuteScalar().ToString();
@@ -75,9 +75,9 @@ namespace WebApplication1
         /// <param name="e"></param>
         protected void btnEdit_Click(object sender, EventArgs e)
         {
-            string sql = @"update [Employees] set [Name] = @Name, [Age] = @Age
-                             where EmployeeID = @ID";
-            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["ADODBConnectionString"].ConnectionString))
+            string sql = @"Update [Students] Set [Name] = @Name, [Gender] = @Gender, [Age] = @Age
+                           Where StudentID = @ID";
+            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["MingConnectionString"].ConnectionString))
             {
                 cn.Open();
                 using (SqlCommand cmd = cn.CreateCommand())
@@ -85,6 +85,7 @@ namespace WebApplication1
                     cmd.CommandText = sql;
                     cmd.Parameters.Add(new SqlParameter("@ID", txtE_ID.Text));
                     cmd.Parameters.Add(new SqlParameter("@Name", txtE_Name.Text));
+                    cmd.Parameters.Add(new SqlParameter("@Gender", txtE_Gender.Text));
                     cmd.Parameters.Add(new SqlParameter("@Age", txtE_Age.Text));
 
                     cmd.ExecuteNonQuery();

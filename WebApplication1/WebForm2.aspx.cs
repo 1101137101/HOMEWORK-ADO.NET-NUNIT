@@ -27,8 +27,8 @@ namespace WebApplication1
                 cn.Open();
                 using (SqlCommand cmd = cn.CreateCommand())
                 {
-                    cmd.CommandText = "select * from students where Name like @name";
-                    cmd.Parameters.Add(new SqlParameter("@name", "%" + txtSearch.Text + "%"));
+                    cmd.CommandText = "Select * From Students Where Name like @Name";
+                    cmd.Parameters.Add(new SqlParameter("@Name", "%" + txtSearch.Text + "%"));
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
                         DataTable dt = new DataTable();

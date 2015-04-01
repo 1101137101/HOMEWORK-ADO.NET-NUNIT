@@ -27,13 +27,15 @@
         <hr />
         ID:<asp:TextBox ID="txtID" runat="server" Enabled="false"></asp:TextBox>
         Name:<asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+        Gender:<asp:TextBox ID="txtGender" runat="server"></asp:TextBox>
         Age:<asp:TextBox ID="txtAge" runat="server"></asp:TextBox>
         <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="新增(ExecuteScalar)" />
 
 
         <br />
         ID:<asp:TextBox ID="txtE_ID" runat="server"></asp:TextBox>
-        Name:<asp:TextBox ID="txtE_Name" runat="server"></asp:TextBox>
+        Name:<asp:TextBox ID="txtE_Name" runat="server" Height="22px"></asp:TextBox>
+        Gender:<asp:TextBox ID="txtE_Gender" runat="server"></asp:TextBox>
         Age:<asp:TextBox ID="txtE_Age" runat="server"></asp:TextBox>
         <asp:Button ID="btnEdit" runat="server" OnClick="btnEdit_Click" Text="修改(ExecuteNonQuery)" />
 

@@ -34,7 +34,7 @@
         <br />
         ID:<asp:TextBox ID="txtE_ID" runat="server"></asp:TextBox>
         Name:<asp:TextBox ID="txtE_Name" runat="server"></asp:TextBox>
-        Gender:<asp:TextBox ID="txtGender0" runat="server"></asp:TextBox>
+        Gender:<asp:TextBox ID="txtE_Gender" runat="server"></asp:TextBox>
         Age:<asp:TextBox ID="txtE_Age" runat="server"></asp:TextBox>
         <asp:Button ID="btnEdit" runat="server" OnClick="btnEdit_Click" Text="修改" />
 

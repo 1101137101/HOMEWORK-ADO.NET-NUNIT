@@ -26,8 +26,8 @@ namespace WebApplication1
             {
                 using (SqlCommand cmd = cn.CreateCommand())
                 {
-                    cmd.CommandText = "select * from students where Name like @name";
-                    cmd.Parameters.Add(new SqlParameter("@name", "%" + txtSearch.Text + "%"));
+                    cmd.CommandText = "Select * From Students Where Name Like @Name";
+                    cmd.Parameters.Add(new SqlParameter("@Name", "%" + txtSearch.Text + "%"));
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
@@ -44,12 +44,12 @@ namespace WebApplication1
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["ADODBConnectionString"].ConnectionString))
+            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["MingConnectionString"].ConnectionString))
             {
                 using (SqlCommand cmd = cn.CreateCommand())
                 {
-                    cmd.CommandText = "select * from employees";
-                    cmd.Parameters.Add(new SqlParameter("@name", "%" + txtSearch.Text + "%"));
+                    cmd.CommandText = "Select * From Students";
+                    cmd.Parameters.Add(new SqlParameter("@Name", "%" + txtSearch.Text + "%"));
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
@@ -65,6 +65,7 @@ namespace WebApplication1
                         DataTable dt = ds.Tables["Table"];
                         DataRow dr = dt.NewRow();
                         dr["Name"] = txtName.Text;
+                        dr["Gender"] = txtGender.Text;
                         dr["Age"] = txtAge.Text;
                         dt.Rows.Add(dr);
                         da.Update(dt);
@@ -77,11 +78,11 @@ namespace WebApplication1
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
-            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["ADODBConnectionString"].ConnectionString))
+            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["MingConnectionString"].ConnectionString))
             {
                 using (SqlCommand cmd = cn.CreateCommand())
                 {
-                    cmd.CommandText = "select * from employees";
+                    cmd.CommandText = "Select * From Students";
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
@@ -95,9 +96,10 @@ namespace WebApplication1
                         ds.Clear();
                         da.Fill(ds);
                         DataTable dt = ds.Tables[0];
-                        DataRow dr = dt.Select(string.Format("EmployeeID = {0}", txtE_ID.Text)).First();
+                        DataRow dr = dt.Select(string.Format("StudentID = {0}", txtE_ID.Text)).First();
                         dr["Name"] = txtE_Name.Text;
                         dr["Age"] = txtE_Age.Text;
+                        dr["Gender"] = txtE_Gender.Text;
                         da.Update(dt);
 
                         btnSearch_Click(null, null);
@@ -108,11 +110,11 @@ namespace WebApplication1
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["ADODBConnectionString"].ConnectionString))
+            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["MingConnectionString"].ConnectionString))
             {
                 using (SqlCommand cmd = cn.CreateCommand())
                 {
-                    cmd.CommandText = "select * from employees";
+                    cmd.CommandText = "Select * From Students";
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
@@ -126,7 +128,7 @@ namespace WebApplication1
                         ds.Clear();
                         da.Fill(ds);
                         DataTable dt = ds.Tables[0];
-                        DataRow dr = dt.Select(string.Format("EmployeeID = {0}", txtD_ID.Text)).First();
+                        DataRow dr = dt.Select(string.Format("StudentID = {0}", txtD_ID.Text)).First();
                         dr.Delete();
                         da.Update(dt);
 
