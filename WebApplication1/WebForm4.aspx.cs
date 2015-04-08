@@ -46,7 +46,11 @@ namespace WebApplication1
             }
         }
 
-        //ExecuteScalar
+        /// <summary>
+        /// ExecuteScalar
+        /// /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnAdd_Click(object sender, EventArgs e)
         {
             string sql = @"INSERT INTO [dbo].[Students]([Name],[Gender],[Age])
