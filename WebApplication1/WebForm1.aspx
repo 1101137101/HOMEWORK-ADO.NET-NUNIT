@@ -10,8 +10,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:TextBox ID="txtSearch" runat="server"></asp:TextBox>
-        <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="查詢" />
+        <asp:TextBox ID="txtSearch" runat="server" Width="100px"></asp:TextBox>
+        &nbsp;<asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="查詢" />
         <br />
         <asp:GridView ID="gvResult" runat="server" CellPadding="4" Width="464px" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
@@ -27,23 +27,23 @@
             <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
         <hr />
-        Name:<asp:TextBox ID="txtName" runat="server"></asp:TextBox>
-        Gender:<asp:TextBox ID="txtGender" runat="server"></asp:TextBox>
-        Age:<asp:TextBox ID="txtAge" runat="server"></asp:TextBox>
-        <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="新增" />
+        Name:<asp:TextBox ID="txtName" runat="server" Width="100px"></asp:TextBox>
+        &nbsp;Gender:<asp:TextBox ID="txtGender" runat="server" Width="100px"></asp:TextBox>
+        &nbsp;Age:<asp:TextBox ID="txtAge" runat="server" Width="100px"></asp:TextBox>
+        &nbsp;<asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="新增" />
 
 
         <br />
-        ID:<asp:TextBox ID="txtE_ID" runat="server"></asp:TextBox>
-        Name:<asp:TextBox ID="txtE_Name" runat="server"></asp:TextBox>
-        Gender:<asp:TextBox ID="txtE_Gender" runat="server"></asp:TextBox>
-        Age:<asp:TextBox ID="txtE_Age" runat="server"></asp:TextBox>
-        <asp:Button ID="btnEdit" runat="server" OnClick="btnEdit_Click" Text="修改" />
+        StudentID:<asp:TextBox ID="txtE_ID" runat="server" Width="100px"></asp:TextBox>
+        &nbsp;Name:<asp:TextBox ID="txtE_Name" runat="server" Width="100px"></asp:TextBox>
+        &nbsp;Gender:<asp:TextBox ID="txtE_Gender" runat="server" Width="100px"></asp:TextBox>
+        &nbsp;Age:<asp:TextBox ID="txtE_Age" runat="server" Width="100px"></asp:TextBox>
+        &nbsp;<asp:Button ID="btnEdit" runat="server" OnClick="btnEdit_Click" Text="修改" />
 
 
         <br />
-        ID:<asp:TextBox ID="txtD_ID" runat="server"></asp:TextBox>
-        <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="刪除" />
+        StudentID:<asp:TextBox ID="txtD_ID" runat="server" Width="100px"></asp:TextBox>
+        &nbsp;<asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="刪除" />
 
 
     </div>

@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
     <div>
         輸入您的年齡：
-        <asp:TextBox ID="txtAge" runat="server" Width="66px"></asp:TextBox>
+        <asp:TextBox ID="txtAge" runat="server" Width="50px"></asp:TextBox>
         
         歲
         
