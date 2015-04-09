@@ -50,11 +50,7 @@ namespace WebApplication1
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
-                        // 自動產生Insert, Update, DeleteCommand
                         SqlCommandBuilder builder = new SqlCommandBuilder(da);
-                        // builder.GetInsertCommand()
-                        // builder.GetUpdateCommand()
-                        // builder.GetDeleteCommand()
 
                         DataSet ds = new DataSet();
                         ds.Clear();
@@ -83,11 +79,7 @@ namespace WebApplication1
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
-                        // 自動產生Insert, Update, DeleteCommand
                         SqlCommandBuilder builder = new SqlCommandBuilder(da);
-                        // builder.GetInsertCommand()
-                        // builder.GetUpdateCommand()
-                        // builder.GetDeleteCommand()
 
                         DataSet ds = new DataSet();
                         ds.Clear();
@@ -115,11 +107,7 @@ namespace WebApplication1
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
-                        // 自動產生Insert, Update, DeleteCommand
                         SqlCommandBuilder builder = new SqlCommandBuilder(da);
-                        // builder.GetInsertCommand()
-                        // builder.GetUpdateCommand()
-                        // builder.GetDeleteCommand()
 
                         DataSet ds = new DataSet();
                         ds.Clear();
