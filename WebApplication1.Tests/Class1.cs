@@ -13,11 +13,11 @@ namespace WebApplication1.Tests
         [Test]
         public void CalYear()
         {
-            BO.Cal cal = new BO.Cal();
+            Born.Class1 cal = new Born.Class1();
             int inputAge = 30;
-            int expect = 1988;
+            int expect = 1985;
 
-            Assert.AreEqual(expect, cal.GetBirthYear(inputAge, BO.Cal.YearFormat.W));
+            Assert.AreEqual(expect, cal.GetBirthYear(inputAge, Born.Class1.YearFormat.W));
         }
     }
 }
