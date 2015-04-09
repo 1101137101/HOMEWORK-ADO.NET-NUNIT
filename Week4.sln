@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
+# Visual Studio Express 2013 for Web
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{1D51B0CA-CAF9-427A-8D3E-28A85A836E85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1.Tests", "ClassLibrary1\WebApplication1.Tests.csproj", "{8A64B78D-6A1D-4AC2-AB1B-5C0270688F9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1D51B0CA-CAF9-427A-8D3E-28A85A836E85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D51B0CA-CAF9-427A-8D3E-28A85A836E85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D51B0CA-CAF9-427A-8D3E-28A85A836E85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A64B78D-6A1D-4AC2-AB1B-5C0270688F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A64B78D-6A1D-4AC2-AB1B-5C0270688F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A64B78D-6A1D-4AC2-AB1B-5C0270688F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A64B78D-6A1D-4AC2-AB1B-5C0270688F9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
