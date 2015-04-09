@@ -7,20 +7,17 @@ using NUnit.Framework;
 
 namespace WebApplication1.Tests
 {
+    [TestFixture]
     public class Class1
     {
-        [TestFixture]
-        public class Class2
+        [Test]
+        public void CalYear()
         {
-            [Test]
-            public void CalYear()
-            {
-                Born.Class1 cal = new Born.Class1();
-                int inputAge = 30;
-                int expect = 1988;
+            BO.Cal cal = new BO.Cal();
+            int inputAge = 30;
+            int expect = 1988;
 
-                Assert.AreEqual(expect, cal.GetBirthYear(inputAge, BO.Cal.YearFormat.W));
-            }
+            Assert.AreEqual(expect, cal.GetBirthYear(inputAge, BO.Cal.YearFormat.W));
         }
     }
 }
