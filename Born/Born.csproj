@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ABB9FAB4-5421-4B4E-A1EA-F04723D7EC04}</ProjectGuid>
+    <ProjectGuid>{92C1D1D6-5EAF-4734-977C-54A6919E3497}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Birth</RootNamespace>
-    <AssemblyName>Birth</AssemblyName>
+    <RootNamespace>Born</RootNamespace>
+    <AssemblyName>Born</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

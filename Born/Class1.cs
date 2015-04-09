@@ -4,22 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Birth
+namespace Born
 {
     public class Class1
     {
         public enum YearFormat
         {
-            c = 0, // 民國
-            w = 1  // 西元
+            C = 0, // 民國年
+            W = 1  // 西元年
         }
         public int GetBirthYear(int Age, YearFormat format)
         {
             int WestYear = (DateTime.Now.Year - Age);
 
-            if (format == YearFormat.c)
+            if (format == YearFormat.C)
                 return (WestYear - 1911);
-            else if (format == YearFormat.w)
+            else if (format == YearFormat.W)
                 return WestYear;
 
             return 0;
